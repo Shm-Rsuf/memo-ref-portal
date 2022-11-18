@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Child from "./Child";
 
 class Parent extends Component {
   constructor(props) {
@@ -9,8 +10,21 @@ class Parent extends Component {
     };
   }
 
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        firstName: "Tumpa",
+      });
+    }, 1000);
+  }
+
   render() {
-    return <div>Parent</div>;
+    console.log("Parent");
+    return (
+      <div>
+        <Child firstName={this.state.firstName} />
+      </div>
+    );
   }
 }
 export default Parent;
