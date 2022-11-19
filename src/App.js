@@ -1,10 +1,10 @@
 import React from "react";
-import Parent from "./components/Parent";
+import REF_IN_FUNC from "./components/REF_IN_FUNC";
 
 const App = () => {
   return (
     <div>
-      <Parent />
+      <REF_IN_FUNC name="Tumpa" />
     </div>
   );
 };
